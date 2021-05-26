@@ -1,0 +1,37 @@
+import "./App.scss";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { useState } from "react";
+
+import axios from "axios";
+
+import Home from "./containers/Home";
+import Header from "./components/Header";
+import Publish from "./containers/Publish";
+import Modify from "./containers/Modify";
+import ProductById from "./containers/PorductById";
+
+function App() {
+  return (
+    <Router>
+      <div>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/publish">
+            <Publish />
+          </Route>
+          <Route path="/modify/:id">
+            <Modify />
+          </Route>
+          <Route path="/product/:id">
+            <ProductById />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+export default App;

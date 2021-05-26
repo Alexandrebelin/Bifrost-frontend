@@ -1,5 +1,10 @@
+import { useParams } from "react-router-dom";
+
 const ProductById = () => {
-  return <div>product</div>;
+  const { id } = useParams();
+
+  console.log(id);
+  return <div>{id}</div>;
 };
 
 export default ProductById;

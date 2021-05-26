@@ -1,8 +1,6 @@
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import React, { useState } from "react";
-
-import axios from "axios";
+import React from "react";
 
 import Home from "./containers/Home";
 import Header from "./components/Header";

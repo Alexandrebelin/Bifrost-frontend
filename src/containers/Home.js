@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
+import Cards from "../components/cards";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -13,7 +14,6 @@ const Home = () => {
         const response = await axios.get("http://localhost:3100/product");
 
         setData(response.data);
-        console.log(response.data);
         setIsLoading(false);
       };
       fetchData();
@@ -27,15 +27,20 @@ const Home = () => {
   ) : (
     <div>
       <div className="hero"></div>
-
       <div className="container">
-        {data.map((product) => {
-          return (
-            <Link key={product._id} to={`/product/${product._id}`}>
-              {product.title}
-            </Link>
-          );
-        })}
+        <div className="cardsWrapper">
+          {data.map((product) => {
+            return (
+              <Link
+                key={product._id}
+                to={`/product/${product._id}`}
+                className="link"
+              >
+                <Cards data={product} />
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

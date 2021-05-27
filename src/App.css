@@ -1,0 +1,91 @@
+body {
+  background-color: #d6d6d6;
+}
+
+header {
+  height: 80px;
+  background-color: #3a3a3a;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* Home */
+
+.hero {
+  height: 400px;
+  border: 2px red solid;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1280px;
+  border: 2px red solid;
+}
+
+.cardsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.cards img {
+  width: 235px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.cards {
+  margin-right: 30px;
+  background-color: white;
+  width: 235px;
+  height: 400px;
+  cursor: pointer;
+  color: black;
+}
+
+/* ProductById */
+
+.containerProduct {
+  margin: 0 auto;
+  width: 1280px;
+}
+
+.containerTitle {
+  height: 110px;
+  background-color: #ffffff;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.containerTitle h2 {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.productContainer {
+  height: 750px;
+  border: 2px red solid;
+  background-color: #ffffff;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.productContainer img {
+  height: 500px;
+  width: 400px;
+  object-fit: cover;
+}
+
+.productContainer div {
+  width: 600px;
+  height: 750px;
+  border: 2px red solid;
+}

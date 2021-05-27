@@ -5,7 +5,9 @@ import ButtonPublish from "./buttonPublish";
 const Header = () => {
   return (
     <header>
-      <Link to="/">Home</Link>
+      <Link to="/">
+        <span>Home</span>
+      </Link>
       <ButtonPublish />
     </header>
   );

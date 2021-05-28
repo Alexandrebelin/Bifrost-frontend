@@ -111,13 +111,21 @@ header {
 .cards > div > h3 {
   text-decoration: none;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
 
-.cards > div > span {
-  margin-top: 5px;
+.cards > div > span:last-child {
+  margin-top: 10px;
   text-decoration: none;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: #81d999;
 }
 
 /* ProductById */
@@ -354,12 +362,4 @@ header {
   color: white;
   cursor: pointer;
   transition-duration: 0.4s;
-}
-
-.red {
-  color: red;
-}
-
-.green {
-  color: #81d999;
 }

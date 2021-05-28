@@ -39,6 +39,7 @@ const ProductById = () => {
           <h4>{data.brand}</h4>
           <p>{data.description}</p>
           <span>Couleur : {data.color}</span>
+
           <div className="stock">
             <div>
               <span>{data.price} €</span>
@@ -46,7 +47,7 @@ const ProductById = () => {
 
             <div className="divider" />
             <div>
-              <InStock data={data.quantitie} />
+              <span>Quantité : {data.quantitie}</span>
             </div>
           </div>
           <div className="dividerButton">

@@ -4,6 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
 import ButtonDelete from "../components/buttonDelete";
+import InStock from "../components/inStock";
 
 const ProductById = () => {
   const { id } = useParams();
@@ -32,16 +33,28 @@ const ProductById = () => {
       <div className="containerTitle ">
         <h2>{data.title}</h2>
       </div>
-      <div className="productContainer">
+      <div className="descriptionContainer">
         <img src={data.image.secure_url} alt="phone" />
         <div>
-          <div>
-            <p>{data.description}</p>
-          </div>
+          <h4>{data.brand}</h4>
+          <p>{data.description}</p>
+          <span>Couleur : {data.color}</span>
+          <div className="stock">
+            <div>
+              <span>{data.price} €</span>
+            </div>
 
-          <span>{data.price}</span>
-          <Link to={`/modify/${id}`}>Modify</Link>
-          <ButtonDelete id={id} />
+            <div className="divider" />
+            <div>
+              <InStock data={data.quantitie} />
+            </div>
+          </div>
+          <div className="dividerButton">
+            <Link to={`/modify/${id}`}>
+              <button className="buttonModifyDelete">Modifier</button>
+            </Link>
+            <ButtonDelete id={id} />
+          </div>
         </div>
       </div>
     </div>

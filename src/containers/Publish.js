@@ -45,77 +45,90 @@ const Publish = () => {
   };
 
   return (
-    <div>
+    <div className="publishContainer">
       <h2>Ajouter un article</h2>
       <form onSubmit={handleSubmit}>
-        <input
-          type="file"
-          onChange={(event) => {
-            setFile(event.target.files[0]);
-          }}
-        />
+        <div className="selectFile">
+          <input
+            type="file"
+            onChange={(event) => {
+              setFile(event.target.files[0]);
+            }}
+          />
+        </div>
+        <div className="titleSection">
+          <div className="textInput">
+            <h4>Tittre</h4>
+            <input
+              type="text"
+              id="title"
+              placeholder="ex: Apple iPhone 12 Pro Max"
+              onChange={(event) => {
+                setTitle(event.target.value);
+              }}
+            />
+          </div>
+          <div className="textInput">
+            <h4>Description</h4>
+            <textarea
+              id="description"
+              rows="5"
+              placeholder="ex: L'iPhone 12 Pro Max est équipé de la puce A14 Bionic ..."
+              onChange={(event) => {
+                setDescription(event.target.value);
+              }}
+            />
+          </div>
+        </div>
+        <div className="detailsSection">
+          <div className="textInput">
+            <h4>Marque</h4>
+            <input
+              type="text"
+              id="selectedBrand"
+              placeholder="ex: Apple"
+              onChange={(event) => {
+                setBrand(event.target.value);
+              }}
+            />
+          </div>
+          <div className="textInput">
+            <h4>Couleur</h4>
+            <input
+              type="text"
+              placeholder="ex: blanc "
+              onChange={(event) => {
+                setColor(event.target.value);
+              }}
+            />
+          </div>
+          <div className="textInput">
+            <h4>Quantité</h4>
+            <input
+              type="text"
+              placeholder="ex: 5"
+              onChange={(event) => {
+                setQuantitie(event.target.value);
+              }}
+            />
+          </div>
 
-        <h4>Tittre</h4>
-        <input
-          type="text"
-          id="title"
-          placeholder="ex: Chemise Sézane verte"
-          onChange={(event) => {
-            setTitle(event.target.value);
-          }}
-        />
-        <h4>Description</h4>
-        <textarea
-          id="description"
-          rows="5"
-          placeholder="ex: porté quelquefois, taille correctement"
-          onChange={(event) => {
-            setDescription(event.target.value);
-          }}
-        />
-        <h4>Marque</h4>
-        <input
-          type="text"
-          id="selectedBrand"
-          placeholder="ex: Apple"
-          onChange={(event) => {
-            setBrand(event.target.value);
-          }}
-        />
-
-        <h4>Couleur</h4>
-        <input
-          type="text"
-          placeholder="ex: blanc "
-          onChange={(event) => {
-            setColor(event.target.value);
-          }}
-        />
-        <h4>Condition</h4>
-        <input
-          type="text"
-          placeholder="ex: neuf "
-          onChange={(event) => {
-            setCondition(event.target.value);
-          }}
-        />
-        <h4>Quantité</h4>
-        <input
-          type="text"
-          placeholder="ex: 5"
-          onChange={(event) => {
-            setQuantitie(event.target.value);
-          }}
-        />
-        <h4>Prix</h4>
-        <input
-          type="text"
-          placeholder="0,00 €"
-          onChange={(event) => {
-            setPrice(event.target.value);
-          }}
-        />
-        <button type="submit">Ajouter</button>
+          <div className="textInput">
+            <h4>Prix</h4>
+            <input
+              type="text"
+              placeholder="0.00 €"
+              onChange={(event) => {
+                setPrice(event.target.value);
+              }}
+            />
+          </div>
+        </div>
+        <div className="diplayButton">
+          <button type="submit" className="buttonAdd">
+            Ajouter
+          </button>
+        </div>
       </form>
     </div>
   );

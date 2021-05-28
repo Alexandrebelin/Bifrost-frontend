@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import axios from "axios";
+
 import Cards from "../components/cards";
 
 const Home = () => {
@@ -12,9 +13,13 @@ const Home = () => {
     try {
       const fetchData = async () => {
         const response = await axios.get("http://localhost:3100/product");
-
-        setData(response.data);
-        setIsLoading(false);
+        if (response.data) {
+          // console.log(response.data);
+          setData(response.data);
+          setIsLoading(false);
+        } else {
+          alert("Something went wrong");
+        }
       };
       fetchData();
     } catch (error) {

@@ -22,7 +22,11 @@ const ButtonDelete = ({ id }) => {
     }
   };
 
-  return <button onClick={handleDelete}>Supprimer</button>;
+  return (
+    <button onClick={handleDelete} className="buttonModifyDelete">
+      Supprimer
+    </button>
+  );
 };
 
 export default ButtonDelete;

@@ -23,7 +23,11 @@ const ButtonDelete = ({ id }) => {
   };
 
   return (
-    <button onClick={handleDelete} className="buttonModifyDelete">
+    <button
+      onClick={handleDelete}
+      className="buttonModifyDelete"
+      data-testid="buttonDelete"
+    >
       Supprimer
     </button>
   );

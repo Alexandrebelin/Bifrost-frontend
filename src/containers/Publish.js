@@ -46,7 +46,7 @@ const Publish = () => {
 
   return (
     <div className="publishContainer">
-      <h2>Ajouter un article</h2>
+      <h2 data-testid="titlePublishPage">Ajouter un article</h2>
       <form onSubmit={handleSubmit}>
         <div className="selectFile">
           <input

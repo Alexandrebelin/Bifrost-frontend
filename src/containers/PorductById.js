@@ -52,7 +52,9 @@ const ProductById = () => {
           </div>
           <div className="dividerButton">
             <Link to={`/modify/${id}`}>
-              <button className="buttonModifyDelete">Modifier</button>
+              <button className="buttonModifyDelete" data-testid="buttonModify">
+                Modifier
+              </button>
             </Link>
             <ButtonDelete id={id} />
           </div>

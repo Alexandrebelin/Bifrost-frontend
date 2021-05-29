@@ -14,7 +14,6 @@ const Home = () => {
       const fetchData = async () => {
         const response = await axios.get("http://localhost:3100/product");
         if (response.data) {
-          // console.log(response.data);
           setData(response.data);
           setIsLoading(false);
         } else {

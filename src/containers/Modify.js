@@ -115,7 +115,11 @@ const Modify = () => {
               </div>
             </div>
             <div className="displayMoify">
-              <button type="submit" className="buttonModifyDelete">
+              <button
+                type="submit"
+                className="buttonModifyDelete"
+                data-testid="buttonSendModification"
+              >
                 Modifier
               </button>
             </div>

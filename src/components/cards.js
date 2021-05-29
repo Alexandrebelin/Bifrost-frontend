@@ -2,7 +2,7 @@ import InStock from "../components/inStock";
 
 const Cards = ({ data, stock }) => {
   return (
-    <div className="cards">
+    <div className="cards" data-testid="phoneCards">
       <img src={data.image.secure_url} alt="cards homePage" />
       <div>
         <h3>{data.title}</h3>

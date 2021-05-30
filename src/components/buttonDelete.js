@@ -9,7 +9,7 @@ const ButtonDelete = ({ id }) => {
       event.preventDefault();
 
       const response = await axios.delete(
-        `http://localhost:3100/product/delete/${id}`
+        `https://bifrost-backend-test.herokuapp.com/product/delete/${id}`
       );
 
       if (response.status === 200) {

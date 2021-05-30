@@ -10,7 +10,6 @@ const Publish = () => {
   const [brand, setBrand] = useState("");
   const [price, setPrice] = useState("");
   const [color, setColor] = useState("");
-  const [condition, setCondition] = useState("");
   const [quantitie, setQuantitie] = useState("");
   const [file, setFile] = useState();
 
@@ -25,13 +24,11 @@ const Publish = () => {
       formData.append("price", price);
       formData.append("brand", brand);
       formData.append("color", color);
-      formData.append("condition", condition);
       formData.append("quantitie", quantitie);
 
       const response = await axios.post(
-        "http://localhost:3100/product/publish",
-        formData,
-        { headers: { "Content-Type": "multipart/form-data" } }
+        "https://bifrost-backend-test.herokuapp.com/product/publish",
+        formData
       );
 
       if (response.data._id) {

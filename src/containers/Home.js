@@ -5,6 +5,8 @@ import axios from "axios";
 
 import Cards from "../components/cards";
 
+import hero from "../assets/img/hero.jpg";
+
 const Home = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -13,6 +15,7 @@ const Home = () => {
     try {
       const fetchData = async () => {
         const response = await axios.get("http://localhost:3100/product");
+        // https://bifrost-backend-test.herokuapp.com/product/
         if (response.data) {
           setData(response.data);
           setIsLoading(false);
@@ -30,7 +33,9 @@ const Home = () => {
     <div></div>
   ) : (
     <div>
-      <div className="hero"></div>
+      <div className="hero">
+        <img src={hero} alt="hero" />
+      </div>
       <div className="container">
         <div className="cardsWrapper">
           {data.map((product) => {

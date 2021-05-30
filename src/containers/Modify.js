@@ -11,7 +11,6 @@ const Modify = () => {
   const [brand, setBrand] = useState("");
   const [price, setPrice] = useState("");
   const [color, setColor] = useState("");
-  const [condition, setCondition] = useState("");
   const [quantitie, setQuantitie] = useState("");
   const [file, setFile] = useState();
 
@@ -26,13 +25,11 @@ const Modify = () => {
       formData.append("price", price);
       formData.append("brand", brand);
       formData.append("color", color);
-      formData.append("condition", condition);
       formData.append("quantitie", quantitie);
 
       const response = await axios.put(
-        `http://localhost:3100/product/update/${id}`,
-        formData,
-        { headers: { "Content-Type": "multipart/form-data" } }
+        `https://bifrost-backend-test.herokuapp.com/product/update/${id}`,
+        formData
       );
 
       if (response.data._id) {

@@ -4,7 +4,6 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
 import ButtonDelete from "../components/buttonDelete";
-import InStock from "../components/inStock";
 
 const ProductById = () => {
   const { id } = useParams();
@@ -15,7 +14,9 @@ const ProductById = () => {
   useEffect(() => {
     try {
       const fetchData = async () => {
-        const response = await axios.get(`http://localhost:3100/product/${id}`);
+        const response = await axios.get(
+          `https://bifrost-backend-test.herokuapp.com/product/${id}`
+        );
 
         setData(response.data);
         setIsLoading(false);

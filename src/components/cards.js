@@ -1,6 +1,6 @@
-import InStock from "../components/inStock";
+import InStock from "./InStock";
 
-const Cards = ({ data, stock }) => {
+const Cards = ({ data }) => {
   return (
     <div className="cards" data-testid="phoneCards">
       <img src={data.image.secure_url} alt="cards homePage" />

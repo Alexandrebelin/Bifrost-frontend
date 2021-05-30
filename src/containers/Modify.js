@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useParams, useHistory } from "react-router-dom";
+
+import axios from "axios";
 
 const Modify = () => {
   const { id } = useParams();
@@ -56,8 +57,14 @@ const Modify = () => {
         </div>
         <div className="descriptionContainer">
           <div className="modifyImg">
+            <label htmlFor="file" className="labelFile">
+              <span className="inputSign">+</span>
+              <span>Ajouter un photo</span>
+            </label>
             <input
+              id="file"
               type="file"
+              className="inputFile"
               onChange={(event) => {
                 setFile(event.target.files[0]);
               }}

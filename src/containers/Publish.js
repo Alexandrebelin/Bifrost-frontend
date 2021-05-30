@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useHistory } from "react-router-dom";
+
+import axios from "axios";
 
 const Publish = () => {
   const history = useHistory();
@@ -46,8 +47,15 @@ const Publish = () => {
       <h2 data-testid="titlePublishPage">Ajouter un article</h2>
       <form onSubmit={handleSubmit}>
         <div className="selectFile">
+          <label htmlFor="file" className="labelFile">
+            <span className="inputSign">+</span>
+            <span>Ajouter un photo</span>
+          </label>
+
           <input
+            id="file"
             type="file"
+            className="inputFile"
             onChange={(event) => {
               setFile(event.target.files[0]);
             }}
@@ -92,6 +100,7 @@ const Publish = () => {
           <div className="textInput">
             <h4>Couleur</h4>
             <input
+              id="color"
               type="text"
               placeholder="ex: blanc "
               onChange={(event) => {
@@ -102,6 +111,7 @@ const Publish = () => {
           <div className="textInput">
             <h4>Quantité</h4>
             <input
+              id="quantitie"
               type="text"
               placeholder="ex: 5"
               onChange={(event) => {
@@ -113,6 +123,7 @@ const Publish = () => {
           <div className="textInput">
             <h4>Prix</h4>
             <input
+              id="price"
               type="text"
               placeholder="0.00 €"
               onChange={(event) => {

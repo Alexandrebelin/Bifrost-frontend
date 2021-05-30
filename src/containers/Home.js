@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 
 import axios from "axios";
 
-import Cards from "../components/cards";
+// Components
+import Cards from "../components/Cards";
 
+// Pictures
 import hero from "../assets/img/hero.jpg";
+import Loader from "../components/Loader";
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -14,8 +17,9 @@ const Home = () => {
   useEffect(() => {
     try {
       const fetchData = async () => {
-        const response = await axios.get("http://localhost:3100/product");
-        // https://bifrost-backend-test.herokuapp.com/product/
+        const response = await axios.get(
+          "https://bifrost-backend-test.herokuapp.com/product"
+        );
         if (response.data) {
           setData(response.data);
           setIsLoading(false);
@@ -30,7 +34,7 @@ const Home = () => {
   }, []);
 
   return isLoading ? (
-    <div></div>
+    <Loader />
   ) : (
     <div>
       <div className="hero">

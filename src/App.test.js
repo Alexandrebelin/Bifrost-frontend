@@ -67,23 +67,4 @@ test("check the path to modify page", async () => {
   );
 
   expect(buttonSendModification).toBeInTheDocument();
-
-  const logo = await screen.findByTestId("logo");
-
-  userEvent.click(logo);
-});
-
-test("delete a product", async () => {
-  render(<App />);
-
-  const phoneCards = await screen.findAllByTestId("phoneCards");
-
-  userEvent.click(phoneCards[0]);
-
-  const buttonDelete = await screen.findByTestId("buttonDelete");
-
-  userEvent.click(buttonDelete);
-
-  const phoneCards2 = await screen.findAllByTestId("phoneCards");
-  expect(phoneCards2.length).toBeGreaterThanOrEqual(1);
 });

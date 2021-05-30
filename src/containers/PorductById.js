@@ -3,7 +3,9 @@ import { useParams, Link } from "react-router-dom";
 
 import axios from "axios";
 
-import ButtonDelete from "../components/buttonDelete";
+// Components
+import ButtonDelete from "../components/ButtonDelete";
+import Loader from "../components/Loader";
 
 const ProductById = () => {
   const { id } = useParams();
@@ -28,7 +30,7 @@ const ProductById = () => {
   }, []);
 
   return isLoading ? (
-    <div></div>
+    <Loader />
   ) : (
     <div className="containerProduct">
       <div className="containerTitle ">

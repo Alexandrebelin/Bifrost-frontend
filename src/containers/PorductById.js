@@ -27,7 +27,7 @@ const ProductById = () => {
     } catch (error) {
       console.log(error.message);
     }
-  }, []);
+  }, [id]);
 
   return isLoading ? (
     <Loader />

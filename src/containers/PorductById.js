@@ -4,7 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
 // Components
-import ButtonDelete from "../components/ButtonDelete";
+import ButtonDelete from "../components/buttonDelete";
 import Loader from "../components/Loader";
 
 const ProductById = () => {

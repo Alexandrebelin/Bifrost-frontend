@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 // Components
-import ButtonPublish from "./ButtonPublish";
+import ButtonPublish from "./buttonPublish";
 import logo from "../assets/img/logo.png";
 
 const Header = () => {

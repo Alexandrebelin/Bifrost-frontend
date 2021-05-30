@@ -1,4 +1,4 @@
-import InStock from "./InStock";
+import InStock from "./inStock";
 
 const Cards = ({ data }) => {
   return (

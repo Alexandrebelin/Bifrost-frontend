@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 // Components
-import Cards from "../components/Cards";
+import Cards from "../components/cards";
 
 // Pictures
 import hero from "../assets/img/hero.jpg";

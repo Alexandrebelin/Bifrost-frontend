@@ -4,6 +4,10 @@ Website built with React JS using Create React App. The backend is developed wit
 
 Please note that this project should be viewed on desktop only.
 
+<br />
+<a href="https://dazzling-ptolemy-bc9360.netlify.app/" target="_blank" rel="noreferrer" >Live site (Netlify deploy)</a>
+<br />
+
 ## Main Dependencies
 
 Axios (API requests)

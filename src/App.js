@@ -8,7 +8,6 @@ import Header from "./components/Header";
 import Publish from "./containers/Publish";
 import Modify from "./containers/Modify";
 import ProductById from "./containers/PorductById";
-import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -28,7 +27,6 @@ function App() {
           <ProductById />
         </Route>
       </Switch>
-      <Footer />
     </Router>
   );
 }

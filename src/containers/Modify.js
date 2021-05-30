@@ -111,7 +111,7 @@ const Modify = () => {
               <div>
                 <input
                   type="text"
-                  placeholder="Mofifier la quantité"
+                  placeholder="Modifier la quantité"
                   onChange={(event) => {
                     setQuantitie(event.target.value);
                   }}
